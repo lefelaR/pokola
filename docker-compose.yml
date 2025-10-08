@@ -1,0 +1,67 @@
+
+
+#mongodb postgres redis elasticsearch kibana mysql rabbitmq 
+
+services:
+  mongodb:
+    image: mongo:latest
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=root
+    ports:
+      - "27017:27017"
+
+ 
+  # postgres:
+  #   image: postgres:latest
+  #   ports:
+  #     - "5432:5432" 
+  #   volumes:
+  #     - postgres_data:/var/lib/postgresql/data
+  #   environment:
+  #     - POSTGRES_USER=root
+  #     - POSTGRES_PASSWORD=root
+  #     - POSTGRES_DB=root
+  # redis:
+  #   image: redis:latest
+  #   ports:
+  #     - "6379:6379"
+  #   volumes:
+  #     - redis_data:/data    
+  #   environment:
+  #     - REDIS_PASSWORD=root
+  # elasticsearch:
+  #   image: elasticsearch:latest
+  #   ports:
+  #     - "9200:9200"
+  #   volumes:
+  #     - elasticsearch_data:/usr/share/elasticsearch/data
+  #   environment:
+  #     - ELASTICSEARCH_PASSWORD=root
+  # kibana:
+  #   image: kibana:latest
+  #   ports:
+  #     - "5601:5601"
+  #   volumes:
+  #     - kibana_data:/usr/share/kibana/data
+  #   environment:
+  #     - KIBANA_PASSWORD=root
+  # mysql:
+  #   image: mysql:latest
+  #   ports:
+  #     - "3306:3306"
+  #   volumes:
+  #     - mysql_data:/var/lib/mysql
+  #   environment:
+  #     - MYSQL_ROOT_PASSWORD=root
+  #     - MYSQL_DATABASE=root
+  #     - MYSQL_USER=root
+  #     - MYSQL_PASSWORD=root
+  # rabbitmq:
+  #   image: rabbitmq:latest
+  #   ports:
+  #     - "15672:15672"
+  #     - "5672:5672"
+  #   environment:
+  #     - RABBITMQ_DEFAULT_USER=root
+  #     - RABBITMQ_DEFAULT_PASS=root
